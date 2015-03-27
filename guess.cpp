@@ -34,7 +34,7 @@ int main()
 			rightposition=0;
 			rightnumber=0;
 			
-			while(t<7){
+			while(t<8){
 				
 				cout<<"enter number1"<<endl;
 				cin>>input1;
@@ -73,12 +73,12 @@ int main()
 					}
 				else {
 					cout<<rightposition<<"A"<<rightnumber<<"B"<<endl;
+					++t;
 					rightposition=0;
 					rightnumber=0;
-					++t;
 					}}
 			
-			if(t=7){
+			if(t=8){
 				++lose;
 				cout<<"win"<<win<<"lose"<<lose<<endl;
 				cout<<"sorry you lose.do you want play again?"<<endl;
