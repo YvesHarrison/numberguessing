@@ -18,9 +18,9 @@ int main()
 		while (choice=='y'){
 		    choice=0;
 		    
-			srand(time(NULL));
+			srand(time(NULL));                   //initialize random number's seed 
 		
-			create1=rand()*10/(RAND_MAX+1);
+			create1=rand()*10/(RAND_MAX+1);      //create three different number 
 			create2=rand()*10/(RAND_MAX+1);
 			while (create2==create1){
 				create2=rand()*10/(RAND_MAX+1);
@@ -41,28 +41,22 @@ int main()
 				cout<<"enter number2"<<endl;
 				cin>>input2;
 				cout<<"enter number3"<<endl;
-				cin>>input3;
+				cin>>input3;                      //guess the number
 				
 				if (input1==create1){
 				    ++rightposition;	}
-				if (input1==create2){
-				    ++rightnumber;	}
-				if (input1==create3){
+				else if (input1==create2||input1==create3){
 				    ++rightnumber;	}
 				    
 				if (input2==create2){
 				    ++rightposition;	}
-				if (input2==create1){
-				    ++rightnumber;	}
-				if (input2==create3){
+				else if (input2==create1||input2==create3){
 				    ++rightnumber;	}
 				
 				if (input3==create3){
 				    ++rightposition;	}
-				if (input3==create2){
-				    ++rightnumber;	}
-				if (input3==create1){
-				    ++rightnumber;	}
+				else if (input3==create2||input3==create1){
+				    ++rightnumber;	}              //calculate A,B
 				
 				if (rightposition==3&&rightnumber==0){
 					++win;
